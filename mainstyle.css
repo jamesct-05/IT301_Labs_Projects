@@ -1,0 +1,30 @@
+
+body{
+    background-color:thistle
+}
+h1{
+    background-color:rgb(217, 183, 217);
+    text-align:center;
+    border:purple 3px solid;;
+    padding:5px;
+    box-shadow: 5px 5px;
+}
+.headings{
+    color:goldenrod;
+}
+h2{
+    text-decoration: gold 3px underline;
+}
+p{
+    color:lemonchiffon;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+
+}
+ul{
+    background-color:plum;
+    color:ivory;
+    border:purple 3px solid;
+    border-radius: 10px;
+    font-size:18px;
+}

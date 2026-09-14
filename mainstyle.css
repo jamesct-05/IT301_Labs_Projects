@@ -3,7 +3,7 @@ body{
     background-color:thistle
 }
 h1{
-    background-color:rgb(217, 183, 217);
+    background-color:#2B2B2B;
     text-align:center;
     border:purple 3px solid;;
     padding:5px;
@@ -14,16 +14,19 @@ h1{
 }
 h2{
     text-decoration: gold 3px underline;
+    background-color:white;
+    color:#846315;
 }
 p{
-    color:lemonchiffon;
+    color:#454545;
+    background-color:#E8D9E8;
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
 
 }
 ul{
-    background-color:plum;
-    color:ivory;
+    background-color:#E8C0E8;
+    color:#2D2D48;
     border:purple 3px solid;
     border-radius: 10px;
     font-size:18px;

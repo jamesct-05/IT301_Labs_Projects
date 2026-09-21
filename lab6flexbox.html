@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Flexbox</title>
+    <style>
+        body{
+            background-color:thistle;
+        }
+        #parent{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border: 1px solid;
+        }
+        .child1-3{
+            width:150px;
+            height:150px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lab 6 - Flexbox</h1>
+    <a href="index.html">back</a>
+    <br><br><br>
+    <div id="parent">
+        <img src="https://picsum.photos/150/150?random=1"  alt="randomImage1" class="child1-3">
+        <img src="https://picsum.photos/200/200?random=2"  alt="randomImage2" id="child2">
+        <img src="https://picsum.photos/150/150?random=3"  alt="randomImage3" class="child1-3">
+    </div>
+</body>
+</html>

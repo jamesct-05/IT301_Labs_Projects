@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 - Masonry</title>
+    <style>
+        body{
+            display:flex;
+            background-color:coral;
+        }
+        #left{
+            display:flex;
+            background-color:darkorange;
+            flex-shrink:0;
+            flex-direction:column;
+            font-size:x-large;
+            justify-content:flex-start;
+            width:100px;
+            min-height:100vh;
+            align-items:center;
+        }
+        #trash{
+            margin-top:auto;
+        }
+        #left .nottrash{
+            margin:0;
+        }
+        #right{
+            display:flex;
+            flex-wrap:wrap;
+            flex-flow:row wrap;
+            overflow-y:auto;
+            align-content:flex-start;
+        }
+        #right img{
+            flex-direction:row;
+            width:auto;
+            object-fit:cover;
+            flex-basis:20%;
+            flex-grow:1;
+            height:100px;
+            align-content:stretch;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <p class="nottrash">&#x1F4F7;</p>
+        <p class="nottrash">&#x1F5C4;&#xfe0f;</p>
+        <p class="nottrash">&#x2764;&#xfe0f;</p>
+        <p id="trash">&#x1F5D1;&#xfe0f;</p>
+    </div>
+    <div id="right">
+        <img src="https://picsum.photos/200/100" alt="random">
+        <img src="https://picsum.photos/100/100" alt="random">
+        <img src="https://picsum.photos/300/100" alt="random">
+        <img src="https://picsum.photos/400/100" alt="random">
+        <img src="https://picsum.photos/220/100" alt="random">
+        <img src="https://picsum.photos/310/100" alt="random">
+        <img src="https://picsum.photos/150/100" alt="random">
+        <img src="https://picsum.photos/200/100" alt="random">
+        <img src="https://picsum.photos/120/100" alt="random">
+        <img src="https://picsum.photos/330/100" alt="random">
+        <img src="https://picsum.photos/240/100" alt="random">
+        <img src="https://picsum.photos/280/100" alt="random">
+        <img src="https://picsum.photos/260/100" alt="random">
+        <img src="https://picsum.photos/110/100" alt="random">
+        <img src="https://picsum.photos/160/100" alt="random">
+        <img src="https://picsum.photos/380/100" alt="random">
+        <img src="https://picsum.photos/320/100" alt="random">
+        <img src="https://picsum.photos/270/100" alt="random">
+        <img src="https://picsum.photos/180/100" alt="random">
+        <img src="https://picsum.photos/330/100" alt="random">
+        <img src="https://picsum.photos/200/100" alt="random">
+        <img src="https://picsum.photos/100/100" alt="random">
+        <img src="https://picsum.photos/300/100" alt="random">
+        <img src="https://picsum.photos/400/100" alt="random">
+        <img src="https://picsum.photos/220/100" alt="random">
+        <img src="https://picsum.photos/310/100" alt="random">
+        <img src="https://picsum.photos/150/100" alt="random">
+        <img src="https://picsum.photos/200/100" alt="random">
+        <img src="https://picsum.photos/120/100" alt="random">
+        <img src="https://picsum.photos/330/100" alt="random">
+
+    </div>
+</body>
+</html>

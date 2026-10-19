@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12 - Calculator</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <button type="submit" id="name-submit">Submit</button>
+    </form>
+    <p id="name-result"></p>
+    <br>
+    <form action="#">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1"><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2"><br>
+        <input type="radio" name="perform" value="add">Addition<br>
+        <input type="radio" name="perform" value="sub">Subtraction<br>
+        <input type="radio" name="perform" value="mul">Multiplication<br>
+        <input type="radio" name="perform" value="div">Division<br>
+        <button type="submit" id="calculate">Calculate</button>
+    </form>
+    <p id="calculator-result"></p>
+    <br><br>
+    <button type="button" id="clear-text">Clear Results</button>
+
+    <script>
+        const name = document.getElementById("name");
+        document.getElementById("name-submit").addEventListener("click", function(){
+            event.preventDefault();
+            document.getElementById("name-result").textContent = `Hello, ${name.value}!`
+        })
+        document.getElementById("calculate").addEventListener("click", function(){
+            event.preventDefault();
+            let result = "";
+            const num1 = document.getElementById("num1");
+            const num2 = document.getElementById("num2");
+            const perform = document.querySelector(`[name=perform]:checked`);
+            if (perform.value == "add"){
+                result = `${num1.value} + ${num2.value} = ${Number(num1.value) + Number(num2.value)}`;
+            }
+            if (perform.value == "sub"){
+                result = `${num1.value} - ${num2.value} = ${Number(num1.value) - Number(num2.value)}`;
+            }
+            if (perform.value == "mul"){
+                result = `${num1.value} * ${num2.value} = ${Number(num1.value) * Number(num2.value)}`;
+            }
+            if (perform.value == "div"){
+                result = `${num1.value} / ${num2.value} = ${Number(num1.value) / Number(num2.value)}`;
+            }
+            document.getElementById("calculator-result").textContent = result;
+        })
+        document.getElementById("clear-text").addEventListener("click", function(){
+            document.getElementById("name-result").textContent = "";
+            document.getElementById("calculator-result").textContent = "";
+        })
+    </script>
+</body>
+</html>

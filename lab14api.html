@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 14 - API</title>
+</head>
+<body>
+    <script>
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+        let p3 = document.createElement("p");
+        let img = document.createElement("img");
+        let bttn = document.createElement("button");
+        bttn.type = "button";
+        bttn.textContent = "NEW PERSON";
+        let form = document.createElement("form");
+        form.action = "#";
+        form.appendChild(bttn);
+        document.body.appendChild(form);
+        const createImage = async()=>{
+            let p = await fetch("https://randomuser.me/api/");
+            p = await p.json();
+            let src = p.results[0].picture.large
+            img.src = src;
+            img.alt = "person";
+            document.body.appendChild(img);
+            p1.textContent = `Name: ${p.results[0].name.first} ${p.results[0].name.last}`;
+            document.body.appendChild(p1);
+            p2.textContent = `Email: ${p.results[0].email}`;
+            document.body.appendChild(p2);
+            p3.textContent = `Phone: ${p.results[0].phone}`;
+            document.body.appendChild(p3);
+
+        }
+        bttn.addEventListener("click", createImage);
+        createImage();
+
+    </script>
+</body>
+</html>
